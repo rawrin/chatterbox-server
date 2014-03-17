@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- dependencies -->
+    <script src="../bower_components/jquery/jquery.min.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <!-- your scripts -->
+    <script src="scripts/config.js"></script>
+    <script src="scripts/app.js"></script>
+  </head>
+  <body>
+    <div id='app'>
+      <div id="main">
+        <h1>chatterbox</h1>
+
+        <hr />
+        <div>
+          <h2>My Friends</h2>
+          <div>
+            <button id="add">Add Friend</button><input type="text" name="add"><br />
+            <button id="remove">Remove Friend</button><input type="text" name="remove"><br />
+            <p>Names:</p>
+            <ul id="friend-list"></ul>
+          </div>
+        </div>
+        
+        <hr />
+        <div>
+          <h2>Post A New Message</h2>
+          <div id='form-input'>
+            <label>username:</label><input type="text" name="username"><br />
+            <label>text:</label><input type="text" name="text"><br />
+            <label>roomname:</label><input type="text" name="roomname"><br />
+          </div>
+          <button id='post'>Post</button><br />
+        </div>
+        
+        <hr />
+        <div>
+          <h2>Get New Messages</h2>
+          <div>
+            <p>Optionally filter by:</p>
+            <label>Criteria:</label>
+            <select id='criteria'>
+              <option value="username">username</option>
+              <option value="roomname">roomname</option>
+            </select>
+            <label>Value</label><input type="text" name="value"><br />
+            <button id='get'>Get</button>
+          </div>
+        </div>
+      </div>
+      <div id="messages"></div>
+    </div>
+  </body>
+</html>
